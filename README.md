@@ -7,8 +7,10 @@ The `boilerplate` branch contains the bare minimum code required to render a dum
 Attention will be paid to add the bare minimum dependencies and webpack config, to get things working.
 
 Starting the dev server:
-	npm install
-	npm start
+
+    npm install
+    npm start
 
 Accessing the App:
-	http://localhost:4000/todo-list
+
+  http://localhost:4000/todo-list
