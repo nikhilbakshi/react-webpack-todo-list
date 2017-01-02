@@ -14,10 +14,34 @@ var initialState = [
   }
 ]
 
+var todo = (state = {}, action) => {
+  switch (action.type) {
+    case 'ADD_TODO':
+      return {
+        id: action.payload.id,
+        text: action.payload.text,
+        completed: action.payload.completed
+      }
+
+      break;
+    default:
+      return state
+  }
+}
+
 var todoList = (state = initialState, action) => {
-  // we do not support any actions at the moment.
-  // just plain display of initialState.
-  return state
+  switch (action.type) {
+    case 'ADD_TODO':
+      action.payload.id = state.length + 1
+      return [
+        ...state,
+        todo(undefined, action)
+      ]
+
+      break;
+    default:
+      return state
+  }
 }
 
 export default todoList
