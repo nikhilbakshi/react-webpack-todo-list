@@ -4,6 +4,8 @@ A Todo List implemented in React, built using Webpack. Intention is to learn how
 
 The `boilerplate` branch contains the bare minimum code required to render a dummy unordered list using React, ES6, JSX and Webpack, rendered using the webpack-dev-server. This can be a good starting point to quickly write JSX code.
 
+Use the `react-expansion` branch, to write Redux code with React.
+
 Attention will be paid to add the bare minimum dependencies and webpack config, to get things working.
 
 Starting the dev server:
