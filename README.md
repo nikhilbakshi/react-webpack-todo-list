@@ -4,6 +4,8 @@
 
 Use this branch to write Redux-React code.
 
+The `src` folder constains sample code for adding new Todos to a TodoList using Redux. Empty the `src` folder to start a fresh app.
+
 Starting the dev server:
 
     npm install
