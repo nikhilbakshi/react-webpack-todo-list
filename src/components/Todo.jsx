@@ -62,7 +62,8 @@ import React, {PropTypes} from 'react'
 class Todo extends React.Component {
   render() {
     return (
-      <li style={{textDecoration: this.props.completed ? 'line-through' : 'none'}}>
+      <li onClick={this.props.onClick}
+        style={{textDecoration: this.props.completed ? 'line-through' : 'none'}}>
         {this.props.text}
       </li>
     )
@@ -71,7 +72,8 @@ class Todo extends React.Component {
 
 Todo.propTypes = {
   text: PropTypes.string.isRequired,
-  completed: PropTypes.bool.isRequired
+  completed: PropTypes.bool.isRequired,
+  onClick: PropTypes.func.isRequired
 }
 
 export default Todo

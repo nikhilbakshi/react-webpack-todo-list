@@ -1,5 +1,5 @@
 import {connect} from 'react-redux'
-import addTodo from '../actions/actions.js'
+import {addTodo} from '../actions/actions.js'
 import AddTodo from '../components/AddTodo.jsx'
 
 const mapStateToProps = (state) => {

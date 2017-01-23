@@ -12,8 +12,10 @@ import Todo from './Todo.jsx'
 // Remember inside any JSX tag, to use a JS variable, or to write JS code inside a JSX tag, always surround the code or variable call with {}, like arount todoListItems or around {todo.text} below.
 class TodoList extends React.Component {
   render () {
+    console.log(this.props.todoList)
+    
     var todoListItems = this.props.todoList.map(todo => {
-      return <Todo key={todo.id} text={todo.text} completed={todo.completed} />
+      return <Todo key={todo.id} text={todo.text} completed={todo.completed} onClick={() => this.props.onTodoClick(todo.id)} />
     })
 
     return(
@@ -25,7 +27,8 @@ class TodoList extends React.Component {
 }
 
 TodoList.propTypes = {
-  todoList: PropTypes.array.isRequired
+  todoList: PropTypes.array.isRequired,
+  onTodoClick: PropTypes.func.isRequired
 }
 
 export default TodoList

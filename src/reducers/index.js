@@ -16,6 +16,7 @@ var todoApp = {
 */
 import {combineReducers} from 'redux'
 import todoList from './todoList.js'
+import visibilityFilter from './visibilityFilter.js'
 
 /*
 todoApp is your top level reducer.
@@ -36,7 +37,8 @@ In the todoList reducer, you can then check for if previousState == undefined, t
 This is just a compact form.
 */
 const todoApp = combineReducers({
-  todoList
+  todoList,
+  visibilityFilter
 })
 
 export default todoApp

@@ -24,6 +24,19 @@ var todo = (state = {}, action) => {
       }
 
       break;
+
+    case 'TOGGLE_TODO':
+      if (state.id !== action.payload.id) {
+        return state
+      }
+
+      console.log('Toggle todo with ID: ' + state.id)
+
+      return Object.assign({}, state, {
+        completed: !state.completed
+      })
+      break;
+
     default:
       return state
   }
@@ -39,6 +52,13 @@ var todoList = (state = initialState, action) => {
       ]
 
       break;
+  
+    case 'TOGGLE_TODO':
+      return state.map(t => {
+        return todo(t, action)
+      })
+      break;
+
     default:
       return state
   }
